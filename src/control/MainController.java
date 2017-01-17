@@ -179,10 +179,10 @@ class ButtonEditor extends DefaultCellEditor {
                 if(new DataWriter().deleteRow(firstName, lastName)) {
                     mainController.renderTable();
                 }
-            }
-            else if(label.equals("UPDATE")) {
-                UpdateView view = new UpdateView();
 
+            }
+            if(label.equals("UPDATE")){
+                UpdateView view = new UpdateView();
                 UpdateController updateController = new UpdateController(view, MainController.rows[rowIndex - 1], mainController);
             }
         }

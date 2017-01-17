@@ -50,6 +50,7 @@ public class UpdateController implements ActionListener{
 
             if(new DataWriter().updateRow(row[1], row[2], newRow)) {
                 JOptionPane.showMessageDialog(null, row[1] + " has been updated");
+                view.dispose();
                 mainController.renderTable();
             }
             else {
